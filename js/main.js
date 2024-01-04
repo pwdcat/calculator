@@ -156,3 +156,5 @@ function clear(){
     operator = '';
     cleared = true;
 }
+
+document.getElementById("footer").textContent = "Copyright © " + new Date().getFullYear() + " pwdcat";
