@@ -1,5 +1,6 @@
 let inputs = ['', ''];
 let operator = '';
+let cleared = false;
 
 function add(a, b){
     return a + b;
@@ -35,6 +36,10 @@ let numbers = document.querySelectorAll(".number");
 
 numbers.forEach((button) =>{
     button.addEventListener('click', () => {
+        if(cleared){
+            expressionBox.textContent = '';
+            cleared = false;
+        }
         if(operator == ''){
             inputs[0] += button.textContent;
             resultBox.textContent = inputs[0];
@@ -61,9 +66,12 @@ let equals = document.getElementById("equals");
 equals.addEventListener('click', () => {
     expressionBox.textContent = inputs[0] + ' ' + operator + ' ' + inputs[1] + ' = ';
     resultBox.textContent = operate(operator, inputs);
+    clear();
 });
 
 function clear(){
+
     inputs = ['', ''];
     operator = '';
+    cleared = true;
 }

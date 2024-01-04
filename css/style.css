@@ -38,6 +38,7 @@ button{
     margin-bottom: 25px;
     height: 100px;
     width: 400px;
+    gap: 5px;
 }
 
 #expression{
