@@ -79,6 +79,7 @@ let operators = document.querySelectorAll(".operator");
 operators.forEach((button) =>{
     button.addEventListener('click', () => {
         if(result != '' && cleared == true){
+            decimalInDisplay = false;
             cleared = false;
             inputs[0] = result;
         }
@@ -90,6 +91,7 @@ operators.forEach((button) =>{
                 cleared = false;
                 inputs[0] = result;
             }
+            decimalInDisplay = false;
             operator = button.textContent;
             expressionBox.textContent = inputs[0] + ' ' + operator;
         }
