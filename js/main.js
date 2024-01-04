@@ -14,7 +14,10 @@ function subtract(a, b){
 }
 
 function multiply(a, b){
-    return a * b;
+    let answer = a * b;
+    answer *= 100;
+    answer = Math.round(answer);
+    return answer / 100;
 }
 
 function divide(a, b){
@@ -22,7 +25,10 @@ function divide(a, b){
         return "INF"
     }
     else{
-        return a / b;
+        let answer = a / b;
+        answer *= 100;
+        answer = Math.round(answer);
+        return answer / 100;
     }
 }
 
