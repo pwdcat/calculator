@@ -60,14 +60,17 @@ function addToDisplay(button){
         cleared = false;
     }
     if(operator == ''){
-        inputs[0] += button.textContent;
-        resultBox.textContent = inputs[0];
+        if(inputs[0].length < 14){
+            inputs[0] += button.textContent;
+            resultBox.textContent = inputs[0];
+        }
     }
     else{
-        inputs[1] += button.textContent;
-        resultBox.textContent = inputs[1];
+        if(inputs[0].length < 14){
+            inputs[1] += button.textContent;
+            resultBox.textContent = inputs[1];
+        }
     }
-
 }
 
 let decimal = document.getElementById("decimal");
